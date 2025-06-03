@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# 🧊 Voxel Terrain Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Generate voxel-style 3D terrains from images using React, Three.js, and Vite.
 
-Currently, two official plugins are available:
+🌐 **Live Demo**  
+👉 [https://jabdallah96.github.io/voxel-generator/](https://jabdallah96.github.io/voxel-generator/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Upload an image and convert it into a 3D voxel heightmap
+- Adjustable voxel **density**, **height scale**, and **mapping mode** (Luminance, Hue, Alpha)
+- Export your terrain as a **GLTF (.gltf)** file - usable by modern game engines
+- Utilizing **InstancedMesh** for fast rendering at high densities
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/jabdallah96/voxel-generator.git
+cd voxel-generator
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then open `http://localhost:5173` in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 📦 Build & Deploy
+
+To create a production build:
+
+```bash
+npm run build
 ```
+
+To deploy to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+Make sure your `vite.config.ts` includes:
+
+```ts
+base: '/voxel-generator/',
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- [React](https://reactjs.org/)
+- [Three.js](https://threejs.org/)
+- [Vite](https://vitejs.dev/)
+- [gh-pages](https://www.npmjs.com/package/gh-pages)
+
+---
+
+## 📄 License
+
+MIT – feel free to fork, modify, and build on top of it.
+
+---
+
+## 🙌 Credits
+
+Crafted by [@jabdallah96](https://github.com/jabdallah96)
